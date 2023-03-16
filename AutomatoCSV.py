@@ -1,4 +1,3 @@
-# Autômato Automático
 # Por: Victor Probio Lopes - Engenharia de Computação
 # Algoritmo original por: Prof. Dr. Osvaldo Severino Junior - IFSP - Campus Piracicaba
 
@@ -65,7 +64,8 @@ while True: # Loop infinito
         transicao = criaTransicao(input('Informe o nome do arquivo CSV: ')) # Chama a função criaTransicao com o nome do arquivo CSV e armazena o dicionário em transicao
         break # Se conseguir carregar o arquivo, sai do loop
     
-    except: print('Arquivo não encontrado! Verifique o nome digitado e tente novamente') # Se não encontrar o arquivo, continua no loop
+    except Exception as e: # Se não encontrar o arquivo
+                print(f'Arquivo não encontrado ou com erros: {e}\nVerifique o nome digitado e os conteúdos do arquivo e tente novamente.') # Continua no loop
 
 while True: # Loop infinito
     arquivoTexto = input("Informe o nome do arquivo de texto com as palavras, ou pressione ENTER para inserir as palavras manualmente: ") # Armazena o nome do arquivo de texto da cadeia, ou entra no modo de leitura manual
@@ -89,5 +89,5 @@ while True: # Loop infinito
                 print(automato(palavras, transicao)) # Chama a função automato com a cadeia e o dicionário
                 break # Sai do programa após a execução
                 
-        except: # Se não encontrar o arquivo
-            print('Arquivo não encontrado! Verifique o nome digitado e tente novamente') # Continua no loop
+        except Exception as e: # Se não encontrar o arquivo
+            print(f'Arquivo não encontrado ou com erros: {e}\nVerifique o nome digitado e os conteúdos do arquivo e tente novamente.') # Continua no loop
