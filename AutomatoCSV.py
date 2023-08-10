@@ -1,4 +1,4 @@
-# Por: Victor Probio Lopes - Engenharia de Computação
+# Por: Victor Probio Lopes - Engenharia de Computação | https://github.com/VictorPLopes
 # Algoritmo original por: Prof. Dr. Osvaldo Severino Junior - IFSP - Campus Piracicaba
 
 
